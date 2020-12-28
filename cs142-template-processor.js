@@ -3,8 +3,9 @@ class Cs142TemplateProcessor {
     constructor(template) {
         this.template = template;
     }
+
     fillIn(data) {
-        return this.template.replace(/{{(\w*)}}/g, (_m, key) => data.hasOwnProperty(key) ? data[key] : "")
+        return this.template.replace(/{{(\w*)}}/g, (_m,key) => data.hasOwnProperty(key) ? data[key] : "")
     }
 }
 
